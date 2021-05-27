@@ -9,13 +9,16 @@ import { DashBoardComponent } from './component/dash-board/dash-board.component'
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CookieModule} from 'ngx-cookie';
+import { HomePageComponent } from './component/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     SignUpPageComponent,
-    DashBoardComponent
+    DashBoardComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

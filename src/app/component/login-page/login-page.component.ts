@@ -30,7 +30,7 @@ export class LoginPageComponent implements OnInit {
           expires: tomorrow
         };
         this.cookieService.put('tokenData', resp.token, cookieOption);
-        this.router.navigate(['/']).then();
+        this.router.navigate(['/dashboard/']).then();
 
       } else {
         alert('Please Try Again!');
