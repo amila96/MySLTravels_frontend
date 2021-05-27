@@ -10,7 +10,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {CookieModule} from 'ngx-cookie';
 import { HomePageComponent } from './component/home-page/home-page.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,11 @@ import { HomePageComponent } from './component/home-page/home-page.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
