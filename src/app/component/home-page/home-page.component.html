@@ -1,14 +1,28 @@
-<p>
-  <mat-toolbar color="primary">
-    <span><mat-icon style="margin-right: 5px">surfing</mat-icon>MySLTravels</span>
-    <div class="nav-spacer"></div>
-    <a mat-button>Home</a>
-    <a mat-button>Attractions</a>
-    <a mat-button>Tour Packages</a>
-    <a mat-button>Airport Pick Up</a>
-    <a mat-button>About Us</a>
-    <a mat-button>Contact Us</a>
-    <a mat-raised-button color="accent" style="margin-right: 5px">Log In</a>
-    <a mat-raised-button color="accent">Sign Up</a>
-  </mat-toolbar>
-</p>
+<app-main-nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/slider1.webp" style="height: 120vh" class="d-block w-100" alt="sigiriya">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/slider2.webp" style="height: 120vh" class="d-block w-100" alt="mountain_view">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/slider3.jpg" style="height: 120vh" class="d-block w-100" alt="ganagaramay_temple">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</app-main-nav>

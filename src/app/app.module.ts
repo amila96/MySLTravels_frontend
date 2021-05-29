@@ -14,6 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MainNavComponent } from './component/main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     LoginPageComponent,
     SignUpPageComponent,
     DashBoardComponent,
-    HomePageComponent
+    HomePageComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,10 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

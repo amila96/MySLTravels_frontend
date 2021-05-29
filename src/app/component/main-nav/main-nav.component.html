@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>MySLTravels</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Destinations</a>
+      <a mat-list-item href="#">Tour Packages</a>
+      <a mat-list-item href="#">Airport Pick Up</a>
+      <a mat-list-item href="#">About Us</a>
+      <a mat-list-item href="#">Contact Us</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span style="font-family: Merienda; font-size:x-large"><img src="assets/images/logo.png" alt="" style="height: 50px ;padding-right:10px">MySLTravels</span>
+      <span class="spacer"></span>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" >Destinations</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Tour Packages</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Airport Pick Up</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">About Us</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Contact Us</a>
+      <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false">Log In</a>
+      <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false">Sign Up</a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
