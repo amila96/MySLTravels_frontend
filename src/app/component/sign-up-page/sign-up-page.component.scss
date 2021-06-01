@@ -1,13 +1,24 @@
+.bgImage{
+  padding: 50px;
+  height: 100vh;
+  background-image: url('https://www.greece-is.com/wp-content/uploads/2017/07/shutterstock_644729785_Cover.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .main-wrap{
-  width: 350px;
+  width: 400px;
   height: auto;
-  border: 1px solid dodgerblue;
-  margin: 50px 50px;
-  padding: 10px;
+  border: 5px solid white;
+  border-radius: 5px;
+  padding: 40px;
 }
 .headerText{
-  color: black;
+  color: darkblue;
   font-family: "DejaVu Math TeX Gyre";
-  font-size: 22px;
+  font-size: 30px;
   text-align:center ;
+}
+.btnSignUp{
+  text-align: center;
 }

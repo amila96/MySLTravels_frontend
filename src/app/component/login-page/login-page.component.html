@@ -1,18 +1,25 @@
-<div class="main-wrap">
-  <p class="headerText">Login</p>
+<app-main-nav>
 
+  <div class="bgImage">
 
-  <div class="mb-3">
-    <label for="email" class="form-label">Email Address</label>
-    <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+    <div class="main-wrap">
+
+      <p class="headerText">Login</p>
+
+      <div class="mb-3">
+        <label for="email" class="form-label" style="color: white">Email Address</label>
+        <input [(ngModel)]="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label" style="color: white">Password</label>
+        <input [(ngModel)]="password" type="password" class="form-control" id="password">
+      </div>
+
+      <p class="btnLogIn">
+        <button class="btn btn-sm btn-primary" (click)="loginUser()">Login</button>
+      </p>
+
+    </div>
   </div>
-
-
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input [(ngModel)]="password" type="password" class="form-control" id="password">
-  </div>
-
-  <button class="btn btn-sm btn-primary" (click)="loginUser()">Login</button>
-
-</div>
+</app-main-nav>

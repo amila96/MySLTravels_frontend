@@ -1,13 +1,26 @@
-.main-wrap{
-  width: 350px;
+.bgImage{
+  padding: 50px;
+  height: 100vh;
+  background-image: url('https://pix10.agoda.net/geo/city/10136/1_10136_02.jpg?s=1920x822');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main-wrap {
+  padding: 40px;
+  width: 400px;
   height: auto;
-  border: 1px solid dodgerblue;
-  margin: 50px 50px;
-  padding: 10px;
+  border: 5px solid white;
+  border-radius: 5px;
+
 }
 .headerText{
-  color: black;
+  color: white;
   font-family: "DejaVu Math TeX Gyre";
-  font-size: 22px;
+  font-size: 30px;
   text-align:center ;
+}
+
+.btnLogIn{
+  text-align: center;
 }

@@ -29,8 +29,8 @@
       <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Airport Pick Up</a>
       <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">About Us</a>
       <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Contact Us</a>
-      <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false">Log In</a>
-      <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false">Sign Up</a>
+      <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false"  routerLink="/login">Log In</a>
+      <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false" routerLink="/singUp">Sign Up</a>
     </mat-toolbar>
     <!-- Add Content Here -->
     <ng-content></ng-content>
