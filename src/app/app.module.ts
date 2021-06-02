@@ -18,6 +18,11 @@ import { MainNavComponent } from './component/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { DestinationsComponent } from './component/destinations/destinations.component';
+import { TourPackagesComponent } from './component/tour-packages/tour-packages.component';
+import { AirportPickupComponent } from './component/airport-pickup/airport-pickup.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+import { ContactUsComponent } from './component/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { MatListModule } from '@angular/material/list';
     SignUpPageComponent,
     DashBoardComponent,
     HomePageComponent,
-    MainNavComponent
+    MainNavComponent,
+    DestinationsComponent,
+    TourPackagesComponent,
+    AirportPickupComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

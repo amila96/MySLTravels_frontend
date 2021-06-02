@@ -22,13 +22,13 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span style="font-family: Merienda; font-size:x-large"><img src="assets/images/logo.png" alt="" style="height: 50px ;padding-right:10px">MySLTravels</span>
+      <span class="pointer" style="font-family: Merienda; font-size:x-large" routerLink="" ><img src="assets/images/logo.png" alt="" style="height: 50px ;padding-right:10px" routerLink="">MySLTravels</span>
       <span class="spacer"></span>
-      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" >Destinations</a>
-      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Tour Packages</a>
-      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Airport Pick Up</a>
-      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">About Us</a>
-      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large">Contact Us</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/destinations">Destinations</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/tourPackages">Tour Packages</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/airportPickup">Airport Pick Up</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/aboutUs">About Us</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/contactUs">Contact Us</a>
       <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false"  routerLink="/login">Log In</a>
       <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false" routerLink="/singUp">Sign Up</a>
     </mat-toolbar>
