@@ -23,6 +23,7 @@ import { TourPackagesComponent } from './component/tour-packages/tour-packages.c
 import { AirportPickupComponent } from './component/airport-pickup/airport-pickup.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ContactUsComponent } from './component/contact-us/contact-us.component'
     TourPackagesComponent,
     AirportPickupComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
