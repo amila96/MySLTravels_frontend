@@ -33,7 +33,9 @@ export class LoginPageComponent implements OnInit {
         this.router.navigate(['/dashboard/']).then();
 
       } else {
-        alert('Please Try Again!');
+        //alert('Please Try Again!');
+        alert('Please check your credentials');
+        //alert(resp.message);
       }
 
     }, error => {

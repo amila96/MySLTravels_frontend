@@ -1,8 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 .title{
   padding-top: 20px;
   font-size: 50px;
   color: #303952;
   text-align: center;
-  font-family: Lobster;
+  font-family: 'Merienda One', cursive;
+}
+.imgDesti{
+  text-align: center;
+}
+.destiImage{
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.14);
+}
+.destiArticle{
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: justify;
+  font-size: 20px;
+  font-family: 'Atma', cursive;
+  font-family: 'Crafty Girls', cursive;
+  color: #273c75;
+}
+.btnReadMore{
+  text-align: center;
 }

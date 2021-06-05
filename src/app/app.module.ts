@@ -24,6 +24,14 @@ import { AirportPickupComponent } from './component/airport-pickup/airport-picku
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { EllaComponent } from './component/destinations/ella/ella.component';
+import { GalleFortComponent } from './component/destinations/galle-fort/galle-fort.component';
+import { HikkaduwaComponent } from './component/destinations/hikkaduwa/hikkaduwa.component';
+import { MirissaComponent } from './component/destinations/mirissa/mirissa.component';
+import { KalpitiyaComponent } from './component/destinations/kalpitiya/kalpitiya.component';
+import { HortonPlainsComponent } from './component/destinations/horton-plains/horton-plains.component';
+import { BentotaComponent } from './component/destinations/bentota/bentota.component';
+import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwara-eliya.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +46,15 @@ import { FooterComponent } from './component/footer/footer.component';
     AirportPickupComponent,
     AboutUsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    EllaComponent,
+    GalleFortComponent,
+    HikkaduwaComponent,
+    MirissaComponent,
+    KalpitiyaComponent,
+    HortonPlainsComponent,
+    BentotaComponent,
+    NuwaraEliyaComponent
   ],
   imports: [
     BrowserModule,
