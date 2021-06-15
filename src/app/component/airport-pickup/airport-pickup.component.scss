@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.title{
+  padding-top: 20px;
+  font-size: 50px;
+  color: #303952;
+  text-align: center;
+  font-family: 'Merienda One', cursive;
+}
+.tourPackage{
+  border: 1px solid darkblue;
+}
+
+
+
+.wrap{
+  height:65vh;
+  background-color:white;
+  //border: 1px solid darkslateblue;
+  border-radius:10px;
+  box-shadow: 1px 0px 32px -12px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 0px 32px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 0px 32px -12px rgba(0,0,0,0.75);
+  padding-right: 25px;
+}
+.carModel{
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Merienda One', cursive;
+  color: #303952;
+}
+.packageDetails{
+  font-family: 'Atma', cursive;
+  font-family: 'Crafty Girls', cursive;
+  text-align: justify;
+  font-size: 20px;
+}
