@@ -32,6 +32,7 @@ import { KalpitiyaComponent } from './component/destinations/kalpitiya/kalpitiya
 import { HortonPlainsComponent } from './component/destinations/horton-plains/horton-plains.component';
 import { BentotaComponent } from './component/destinations/bentota/bentota.component';
 import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwara-eliya.component';
+import { AirportPickupBookingComponent } from './component/airport-pickup/airport-pickup-booking/airport-pickup-booking.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwa
     KalpitiyaComponent,
     HortonPlainsComponent,
     BentotaComponent,
-    NuwaraEliyaComponent
+    NuwaraEliyaComponent,
+    AirportPickupBookingComponent
   ],
   imports: [
     BrowserModule,
