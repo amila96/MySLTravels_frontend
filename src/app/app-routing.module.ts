@@ -18,6 +18,7 @@ import { HortonPlainsComponent } from './component/destinations/horton-plains/ho
 import { KalpitiyaComponent } from './component/destinations/kalpitiya/kalpitiya.component';
 import { MirissaComponent } from './component/destinations/mirissa/mirissa.component';
 import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwara-eliya.component';
+import { AirportPickupBookingComponent } from './component/airport-pickup/airport-pickup-booking/airport-pickup-booking.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -36,7 +37,8 @@ const routes: Routes = [
   {path: 'destinations/hortonPlains', component: HortonPlainsComponent},
   {path: 'destinations/kalpitiya', component: KalpitiyaComponent},
   {path: 'destinations/mirissa', component: MirissaComponent},
-  {path: 'destinations/nuwaraEliya', component: NuwaraEliyaComponent}
+  {path: 'destinations/nuwaraEliya', component: NuwaraEliyaComponent},
+  {path: 'tourPackages/airportPickupBooking', component: AirportPickupBookingComponent}
 ];
 
 @NgModule({
