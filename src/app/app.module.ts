@@ -33,6 +33,14 @@ import { HortonPlainsComponent } from './component/destinations/horton-plains/ho
 import { BentotaComponent } from './component/destinations/bentota/bentota.component';
 import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwara-eliya.component';
 import { AirportPickupBookingComponent } from './component/airport-pickup/airport-pickup-booking/airport-pickup-booking.component';
+import { AdventureTourComponent } from './component/tour-packages/adventure-tour/adventure-tour.component';
+import { CultureTourComponent } from './component/tour-packages/culture-tour/culture-tour.component';
+import { BeachTourComponent } from './component/tour-packages/beach-tour/beach-tour.component';
+import { NatureTourComponent } from './component/tour-packages/nature-tour/nature-tour.component';
+import { HillCountryTourComponent } from './component/tour-packages/hill-country-tour/hill-country-tour.component';
+import { AncientTourComponent } from './component/tour-packages/ancient-tour/ancient-tour.component';
+import { HikingTourComponent } from './component/tour-packages/hiking-tour/hiking-tour.component';
+import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +64,15 @@ import { AirportPickupBookingComponent } from './component/airport-pickup/airpor
     HortonPlainsComponent,
     BentotaComponent,
     NuwaraEliyaComponent,
-    AirportPickupBookingComponent
+    AirportPickupBookingComponent,
+    AdventureTourComponent,
+    CultureTourComponent,
+    BeachTourComponent,
+    NatureTourComponent,
+    HillCountryTourComponent,
+    AncientTourComponent,
+    HikingTourComponent,
+    WildlifeTourComponent
   ],
   imports: [
     BrowserModule,

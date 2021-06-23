@@ -19,6 +19,14 @@ import { KalpitiyaComponent } from './component/destinations/kalpitiya/kalpitiya
 import { MirissaComponent } from './component/destinations/mirissa/mirissa.component';
 import { NuwaraEliyaComponent } from './component/destinations/nuwara-eliya/nuwara-eliya.component';
 import { AirportPickupBookingComponent } from './component/airport-pickup/airport-pickup-booking/airport-pickup-booking.component';
+import { AdventureTourComponent } from './component/tour-packages/adventure-tour/adventure-tour.component';
+import { AncientTourComponent } from './component/tour-packages/ancient-tour/ancient-tour.component';
+import { BeachTourComponent } from './component/tour-packages/beach-tour/beach-tour.component';
+import { CultureTourComponent } from './component/tour-packages/culture-tour/culture-tour.component';
+import { HikingTourComponent } from './component/tour-packages/hiking-tour/hiking-tour.component';
+import { HillCountryTourComponent } from './component/tour-packages/hill-country-tour/hill-country-tour.component';
+import { NatureTourComponent } from './component/tour-packages/nature-tour/nature-tour.component';
+import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -38,7 +46,15 @@ const routes: Routes = [
   {path: 'destinations/kalpitiya', component: KalpitiyaComponent},
   {path: 'destinations/mirissa', component: MirissaComponent},
   {path: 'destinations/nuwaraEliya', component: NuwaraEliyaComponent},
-  {path: 'tourPackages/airportPickupBooking', component: AirportPickupBookingComponent}
+  {path: 'tourPackages/airportPickupBooking', component: AirportPickupBookingComponent},
+  {path: 'tourPackages/adventureTour', component: AdventureTourComponent},
+  {path: 'tourPackages/ancientTour', component: AncientTourComponent},
+  {path: 'tourPackages/beachTour', component: BeachTourComponent},
+  {path: 'tourPackages/cultureTour', component: CultureTourComponent},
+  {path: 'tourPackages/hikingTour', component: HikingTourComponent},
+  {path: 'tourPackages/hillCountryTour', component: HillCountryTourComponent},
+  {path: 'tourPackages/natureTour', component: NatureTourComponent},
+  {path: 'tourPackages/wildlifeTour', component: WildlifeTourComponent}
 ];
 
 @NgModule({
