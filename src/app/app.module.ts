@@ -41,6 +41,7 @@ import { HillCountryTourComponent } from './component/tour-packages/hill-country
 import { AncientTourComponent } from './component/tour-packages/ancient-tour/ancient-tour.component';
 import { HikingTourComponent } from './component/tour-packages/hiking-tour/hiking-tour.component';
 import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/w
     HillCountryTourComponent,
     AncientTourComponent,
     HikingTourComponent,
-    WildlifeTourComponent
+    WildlifeTourComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

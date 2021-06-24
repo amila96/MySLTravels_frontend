@@ -27,6 +27,7 @@ import { HikingTourComponent } from './component/tour-packages/hiking-tour/hikin
 import { HillCountryTourComponent } from './component/tour-packages/hill-country-tour/hill-country-tour.component';
 import { NatureTourComponent } from './component/tour-packages/nature-tour/nature-tour.component';
 import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -54,7 +55,8 @@ const routes: Routes = [
   {path: 'tourPackages/hikingTour', component: HikingTourComponent},
   {path: 'tourPackages/hillCountryTour', component: HillCountryTourComponent},
   {path: 'tourPackages/natureTour', component: NatureTourComponent},
-  {path: 'tourPackages/wildlifeTour', component: WildlifeTourComponent}
+  {path: 'tourPackages/wildlifeTour', component: WildlifeTourComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({

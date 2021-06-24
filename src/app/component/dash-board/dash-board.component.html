@@ -1,1 +1,121 @@
-<p>dash-board works!</p>
+<div class="main-wrap">
+  <p class="tittle">Customer Form</p>
+  <h1>Contact us messages</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Message</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempMessage of contactUsMessageList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempMessage.name}}</td>
+      <td>{{tempMessage.email}}</td>
+      <td>{{tempMessage.subject}}</td>
+      <td>{{tempMessage.message}}</td>
+      <td>
+        <p>
+          <button class="btn btn-danger btn-sm" (click)="deleteMessage(tempMessage._id)">Delete</button>
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+//////////////////////////
+
+  <h1>Airport pickup bookings</h1>
+
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Image</th>
+      <th scope="col">location</th>
+      <th scope="col">distance</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempCustomer of customerList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempCustomer.name}}</td>
+      <td>{{tempCustomer.address}}</td>
+      <td>{{tempCustomer.salary}}</td>
+      <td>
+        <img style="width: 80px; height: 50px" src="https://www.brandquarterly.com/wp-content/uploads/2017/11/How-To-Create-A-Customer-Service-Culture-Q.jpg" alt="">
+      </td>
+      <td>{{tempCustomer.pickupLocation}}</td>
+      <td>{{tempCustomer.distance}}</td>
+      <td>
+        <p>
+          <!--<button class="btn btn-success btn-sm" (click)="openModel(tempCustomer)">Update</button>&nbsp;-->
+          <button class="btn btn-danger btn-sm" (click)="deleteCustomer(tempCustomer._id)">Delete</button>
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+<!--  <mat-paginator [length]="100"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>-->
+
+</div>
+
+
+
+
+
+
+
+<!-- Button trigger modal -->
+<!--<button style="display: none" id="updatebutton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+&lt;!&ndash; Modal &ndash;&gt;
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Customer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="nameForUpdate" class="form-label">Name</label>
+          <input value="{{selectedCustomer?.name}}" [(ngModel)]="customerNameForUpdate" type="text" class="form-control" id="nameForUpdate" placeholder="please enter your name here">
+        </div>
+
+        <div class="mb-3">
+          <label for="addressForUpdate" class="form-label">Address</label>
+          <input  value="{{selectedCustomer?.address}}" [(ngModel)]="customerAddressForUpdate"  type="text" class="form-control" id="addressForUpdate" placeholder="What's your home city?">
+        </div>
+
+        <div class="mb-3">
+          <label for="salaryForUpdate" class="form-label">Salary</label>
+          <input  value="{{selectedCustomer?.salary}}" [(ngModel)]="customerSalaryForUpdate"  type="number" class="form-control" id="salaryForUpdate" placeholder="Salary here">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateCustomer()">Save changes</button>
+      </div>
+    </div>
+  </div>-->
+<!--</div>-->

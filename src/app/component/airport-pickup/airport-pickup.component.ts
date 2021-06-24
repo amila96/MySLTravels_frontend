@@ -11,5 +11,4 @@ export class AirportPickupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
