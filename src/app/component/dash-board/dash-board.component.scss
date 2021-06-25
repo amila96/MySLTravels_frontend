@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+.nav-bar{
+  width:100%;
+  height:55px;
+  background-color:#1e3799;
+  padding-top:7px;
+}
+.left-slider{
+  width:300px;
+  height:92vh;
+  background-color:#1e3799;
+  position:absolute;
+}
+.txt-welcome{
+  font-family: 'Itim', cursive;
+  font-size:20px;
+  color:white;
+  padding-left:10px;
+}
+.nav-list{
+  margin:0;
+  padding:0;
+  list-style:none;
+  li{
+    padding: 5px 15px;
+    background-color:#0c2461;
+    a{
+      text-decoration:none;
+      color:white;
+    }
+  }
+  li:hover{
+    background-color:#30336b;
+    cursor:pointer;
+  }
+}
+
+
 .main-wrap{
   width: 100%;
   height: auto;
@@ -5,8 +44,15 @@
 }
 
 .tittle{
-  text-align: center;
-  font-family: 'Lato', sans-serif;
+  text-align: left;
+  font-family: 'Merienda One', cursive;
   font-size: 20px;
-  color: #d35400;
+  color: #303952;
+}
+.dashboardTitle{
+  margin-top: 10px;
+  color: #303952;
+  font-family: 'Merienda One', cursive;
+  font-size: 30px;
+  text-align:center ;
 }

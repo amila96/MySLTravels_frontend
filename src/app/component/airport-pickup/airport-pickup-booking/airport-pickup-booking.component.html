@@ -6,17 +6,17 @@
 
     <div class="mb-3">
       <label for="Name" class="form-label" >Name</label>
-      <input [(ngModel)]="customerName" type="text" class="form-control" id="Name">
+      <input  type="text" class="form-control" id="Name">
     </div>
 
     <div class="mb-3">
       <label for="passportNum" class="form-label" >Passport Number</label>
-      <input [(ngModel)]="customerSalary" type="text" class="form-control" id="passportNum">
+      <input  type="text" class="form-control" id="passportNum">
     </div>
 
     <div class="mb-3">
       <label for="email" class="form-label" >Email Address</label>
-      <input [(ngModel)]="customerAddress" type="email" class="form-control" id="email">
+      <input  type="email" class="form-control" id="email">
     </div>
 
     <div class="mb-3">
@@ -53,131 +53,9 @@
     </div>
     <br>
 
-    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveCustomer()">Confirm Booking</button></p>
+    <p style="text-align: center"><button mat-raised-button color="primary" >Confirm Booking</button></p>
 
   </div>
-
-
-
-  <!--<div class="main-wrap">
-    <p class="tittle">Customer Form</p>
--->
-
-   <!-- <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input [(ngModel)]="customerName" type="text" class="form-control" id="name" placeholder="please enter your name here">
-    </div>-->
-
-    <!--<div class="mb-3">
-      <label for="address" class="form-label">Address</label>
-      <input [(ngModel)]="customerAddress"  type="text" class="form-control" id="address" placeholder="What's your home city?">
-    </div>-->
-
-    <!--<div class="mb-3">
-      <label for="salary" class="form-label">Salary</label>
-      <input [(ngModel)]="customerSalary"  type="number" class="form-control" id="salary" placeholder="Salary here">
-    </div>-->
-
-    <!--display: flex (justify-content:flex-end, align-items:right)-->
-   <!-- <p style="text-align: right">
-      <button class="btn btn-primary btn-sm" (click)="saveCustomer()">Save Customer</button>
-    </p>
-
-    <hr>-->
-
-
-    <!--<table class="table">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Address</th>
-        <th scope="col">Salary</th>
-        <th scope="col">Image</th>
-        <th scope="col">Operate</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let tempCustomer of customerList; index as num">
-        <th scope="row">{{num+1}}</th>
-        <td>{{tempCustomer.name}}</td>
-        <td>{{tempCustomer.address}}</td>
-        <td>{{tempCustomer.salary}}</td>
-        <td>
-          <img style="width: 80px; height: 50px" src="https://www.brandquarterly.com/wp-content/uploads/2017/11/How-To-Create-A-Customer-Service-Culture-Q.jpg" alt="">
-        </td>
-        <td>
-          <p>
-            <button class="btn btn-success btn-sm" (click)="openModel(tempCustomer)">Update</button>&nbsp;
-            <button class="btn btn-danger btn-sm" (click)="deleteCustomer(tempCustomer._id)">Delete</button>
-          </p>
-        </td>
-      </tr>
-      </tbody>
-    </table>-->
-
-    <!--<br>
-    &lt;!&ndash;  <mat-paginator [length]="100"
-                     [pageSize]="10"
-                     [pageSizeOptions]="[5, 10, 25, 100]">
-      </mat-paginator>&ndash;&gt;
-
-  </div>-->
-
-
-
-
-
-
-
-  <!-- Button trigger modal -->
-  <!--<button style="display: none" id="updatebutton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>-->
-
-  <!-- Modal -->
-  <!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Update Customer</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label for="nameForUpdate" class="form-label">Name</label>
-            <input value="{{selectedCustomer?.name}}" [(ngModel)]="customerNameForUpdate" type="text" class="form-control" id="nameForUpdate" placeholder="please enter your name here">
-          </div>
-
-          <div class="mb-3">
-            <label for="addressForUpdate" class="form-label">Address</label>
-            <input  value="{{selectedCustomer?.address}}" [(ngModel)]="customerAddressForUpdate"  type="text" class="form-control" id="addressForUpdate" placeholder="What's your home city?">
-          </div>
-
-          <div class="mb-3">
-            <label for="salaryForUpdate" class="form-label">Salary</label>
-            <input  value="{{selectedCustomer?.salary}}" [(ngModel)]="customerSalaryForUpdate"  type="number" class="form-control" id="salaryForUpdate" placeholder="Salary here">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="updateCustomer()">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>-->
-<!--  </div>-->
-
-
-
-
-
-
-
-
-
 
   <app-footer></app-footer>
 </app-main-nav>
