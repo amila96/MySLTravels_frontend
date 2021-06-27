@@ -8,6 +8,7 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class ContactUsMessageService {
+
   baseUrl = environment.baseUrl2;
   constructor(private http: HttpClient) {
   }

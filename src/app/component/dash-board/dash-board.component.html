@@ -54,13 +54,58 @@
       <td>
         <p>
           <button class="btn btn-danger btn-sm" (click)="deleteMessage(tempMessage._id)">Delete</button>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
         </p>
       </td>
     </tr>
     </tbody>
   </table>
 </div>
+<br>
 
+<!--airportpickup bookings-->
+<div class="main-wrap">
+  <p class="tittle">Airport Pickup Bookings</p>
+  <br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Passport Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">No. of Passengers</th>
+      <th scope="col">Vehicle</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Pickup Location</th>
+      <th scope="col">Distance</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempAirbooking of airportPickupBookingList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempAirbooking.name}}</td>
+      <td>{{tempAirbooking.passportNumber}}</td>
+      <td>{{tempAirbooking.email}}</td>
+      <td>{{tempAirbooking.numberOfPassengers}}</td>
+      <td>{{tempAirbooking.vehicleType}}</td>
+      <td>{{tempAirbooking.date}}</td>
+      <td>{{tempAirbooking.time}}</td>
+      <td>{{tempAirbooking.location}}</td>
+      <td>{{tempAirbooking.distance}}</td>
+      <td>
+        <p>
+          <button class="btn btn-danger btn-sm" (click)="deleteAirportPickupBooking(tempAirbooking._id)">Delete</button>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
 
 

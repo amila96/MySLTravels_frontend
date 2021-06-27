@@ -10,6 +10,7 @@ export const environment = {
   production: false,
   baseUrl: 'http://localhost:3000/api/v1/customerRoute/',
   baseUrl2: 'http://localhost:3000/api/v1/contactUsMessageRoute/',
+  baseUrl3: 'http://localhost:3000/api/v1/airportPickupBookingRoute/',
 };
 
 

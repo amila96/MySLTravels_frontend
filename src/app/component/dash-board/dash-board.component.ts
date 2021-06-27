@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ContactUsMessageService} from '../../service/contact-us-message.service';
 import ContactUsMessageDTO from '../../dto/ContactUsMessageDTO';
+import {AirportPickupBookingService} from '../../service/airport-pickup-booking.service';
+import AirportPickupBookingsDTO from '../../dto/AirportPickupBookingsDTO';
 import { animate, style, transition, trigger} from '@angular/animations';
+import {logger} from "codelyzer/util/logger";
 
 @Component({
   selector: 'app-dash-board',
@@ -22,20 +25,17 @@ import { animate, style, transition, trigger} from '@angular/animations';
 
 export class DashBoardComponent implements OnInit {
 
-  constructor(private contactUsMessageService: ContactUsMessageService) {
+  constructor(private contactUsMessageService: ContactUsMessageService, private airportPickupBookingService: AirportPickupBookingService) {
   }
 
   contactUsMessageList: any[] = [];
-  airportCustomerName = '';
-  airportCustomerEmail = '';
-  airportCustomerSubject = '';
-  airportCustomerMessage = '';
 
-  /*selectedCustomer: any = null;*/
+  airportPickupBookingList: any[] = [];
+
 
   ngOnInit(): void {
-
     this.loadAllMessages();
+    this.loadAllAirportPickupBookings();
   }
 
   leftSideVisibleState= false;
@@ -62,4 +62,24 @@ export class DashBoardComponent implements OnInit {
       });
     }
   }
+
+  loadAllAirportPickupBookings(){
+    this.airportPickupBookingService.getAllAirBookings().subscribe(response => {
+      this.airportPickupBookingList = response.dataSet;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  deleteAirportPickupBooking(_id: string){
+    if (confirm('Are you sure?')) {
+      this.airportPickupBookingService.deleteAirBooking(_id).subscribe(respose => {
+        this.loadAllAirportPickupBookings();
+        alert('Deleted!');
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
+
 }

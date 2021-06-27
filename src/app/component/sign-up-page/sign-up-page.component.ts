@@ -19,6 +19,7 @@ export class SignUpPageComponent implements OnInit {
 
   registerUser() {
     this.loginService.registerUser(this.email, this.password).subscribe(resp => {
+      alert(resp.message);
       console.log(resp);
     }, error => {
       console.log(error);

@@ -15,10 +15,10 @@ export class ContactUsComponent implements OnInit {
   constructor(private contactUsMessageService: ContactUsMessageService) {
   }
 
-  airportCustomerName = '';
-  airportCustomerEmail = '';
-  airportCustomerSubject = '';
-  airportCustomerMessage = '';
+  CustomerName = '';
+  CustomerEmail = '';
+  CustomerSubject = '';
+  CustomerMessage = '';
 
 
   contactUsMessageList: any[] = [];
@@ -40,10 +40,10 @@ export class ContactUsComponent implements OnInit {
   saveMessage() {
 
     const dto = new ContactUsMessageDTO(
-      this.airportCustomerName.trim(),
-      this.airportCustomerEmail.trim(),
-      this.airportCustomerSubject.trim(),
-      this.airportCustomerMessage.trim(),
+      this.CustomerName.trim(),
+      this.CustomerEmail.trim(),
+      this.CustomerSubject.trim(),
+      this.CustomerMessage.trim(),
     );
 
     this.contactUsMessageService.saveMessage(dto).subscribe(resp => {

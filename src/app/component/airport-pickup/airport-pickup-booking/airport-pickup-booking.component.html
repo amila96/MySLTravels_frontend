@@ -6,27 +6,27 @@
 
     <div class="mb-3">
       <label for="Name" class="form-label" >Name</label>
-      <input  type="text" class="form-control" id="Name">
+      <input [(ngModel)]="AirPickBookingCusName" type="text" class="form-control" id="Name">
     </div>
 
     <div class="mb-3">
       <label for="passportNum" class="form-label" >Passport Number</label>
-      <input  type="text" class="form-control" id="passportNum">
+      <input [(ngModel)]="AirPickBookingCusPassport" type="text" class="form-control" id="passportNum">
     </div>
 
     <div class="mb-3">
       <label for="email" class="form-label" >Email Address</label>
-      <input  type="email" class="form-control" id="email">
+      <input [(ngModel)]="AirPickBookingEmail" type="email" class="form-control" id="email">
     </div>
 
     <div class="mb-3">
       <label for="NumberOfPassengers" class="form-label" >Number Of Passengers</label>
-      <input  type="number" class="form-control" id="NumberOfPassengers">
+      <input [(ngModel)]="AirPickBookingNumOfCus" type="number" class="form-control" id="NumberOfPassengers">
     </div>
 
     <div class="mb-3">
       <label for="disabledSelect" class="form-label">Vehicle</label>
-      <select id="disabledSelect" class="form-select">
+      <select [(ngModel)]="AirPickBookingVehicle" id="disabledSelect" class="form-select">
         <option>Honda Fit Shuttle gp 5 </option>
         <option>Toyota KDH Super GL </option>
       </select>
@@ -34,28 +34,28 @@
 
     <div class="mb-3">
       <label for="date1" class="form-label" >Arrival Date</label>
-      <input  type="date" class="form-control" id="date1">
+      <input [(ngModel)]="AirPickBookingArrivalDate" type="date" class="form-control" id="date1">
     </div>
 
     <div class="mb-3">
       <label for="time1" class="form-label" >Arrival Time</label>
-      <input  type="time" class="form-control" id="time1">
+      <input [(ngModel)]="AirPickBookingArrivalTime" type="time" class="form-control" id="time1">
     </div>
 
     <div class="mb-3">
       <label for="location" class="form-label" >Pickup location</label>
-      <input  type="text" class="form-control" id="location">
+      <input [(ngModel)]="AirPickBookingPickLocation" type="text" class="form-control" id="location">
     </div>
 
     <div class="mb-3">
       <label for="distance" class="form-label" >Distance to the destination</label>
-      <input  type="number" class="form-control" id="distance">
+      <input [(ngModel)]="AirPickBookingDistance" type="number" class="form-control" id="distance">
     </div>
     <br>
 
-    <p style="text-align: center"><button mat-raised-button color="primary" >Confirm Booking</button></p>
+    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveBooking()">Inquiry Now</button></p>
 
   </div>
-
+  <br>
   <app-footer></app-footer>
 </app-main-nav>

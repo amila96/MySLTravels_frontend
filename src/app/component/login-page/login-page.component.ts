@@ -34,9 +34,6 @@ export class LoginPageComponent implements OnInit {
 
       } else {
         alert(resp.message);
-        //alert('Please Try Again!');
-        //alert('Please check your credentials');
-        //alert(resp.message);
       }
 
     }, error => {
