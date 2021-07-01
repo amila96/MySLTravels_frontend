@@ -31,6 +31,19 @@ import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/w
 import { BentotaGerComponent } from './component/destinations/bentota/bentota-ger/bentota-ger.component';
 import { BentotaRusComponent } from './component/destinations/bentota/bentota-rus/bentota-rus.component';
 import { EllaGerComponent } from './component/destinations/ella/ella-ger/ella-ger.component';
+import { EllaRusComponent } from './component/destinations/ella/ella-rus/ella-rus.component';
+import { GalleFortGerComponent } from './component/destinations/galle-fort/galle-fort-ger/galle-fort-ger.component';
+import { GalleFortRusComponent } from './component/destinations/galle-fort/galle-fort-rus/galle-fort-rus.component';
+import { HikkaduwaGerComponent } from './component/destinations/hikkaduwa/hikkaduwa-ger/hikkaduwa-ger.component';
+import { HikkaduwaRusComponent } from './component/destinations/hikkaduwa/hikkaduwa-rus/hikkaduwa-rus.component';
+import { HortonPlainsGerComponent } from './component/destinations/horton-plains/horton-plains-ger/horton-plains-ger.component';
+import { HortonPlainsRusComponent } from './component/destinations/horton-plains/horton-plains-rus/horton-plains-rus.component';
+import { KalpitiyaGerComponent } from './component/destinations/kalpitiya/kalpitiya-ger/kalpitiya-ger.component';
+import { KalpitiyaRusComponent } from './component/destinations/kalpitiya/kalpitiya-rus/kalpitiya-rus.component';
+import { MirissaGerComponent } from './component/destinations/mirissa/mirissa-ger/mirissa-ger.component';
+import { MirissaRusComponent } from './component/destinations/mirissa/mirissa-rus/mirissa-rus.component';
+import { NuwaraEliyaGerComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-ger/nuwara-eliya-ger.component';
+import { NuwaraEliyaRusComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-rus/nuwara-eliya-rus.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -62,6 +75,19 @@ const routes: Routes = [
   {path: 'destinations/bentota-ger', component: BentotaGerComponent},
   {path: 'destinations/bentota-rus', component: BentotaRusComponent},
   {path: 'destinations/ella-ger', component: EllaGerComponent},
+  {path: 'destinations/ella-rus', component: EllaRusComponent},
+  {path: 'destinations/galle-ger', component: GalleFortGerComponent},
+  {path: 'destinations/galle-rus', component: GalleFortRusComponent},
+  {path: 'destinations/hikkaduwa-ger', component: HikkaduwaGerComponent},
+  {path: 'destinations/hikkaduwa-rus', component: HikkaduwaRusComponent},
+  {path: 'destinations/hortonPlains-ger', component: HortonPlainsGerComponent},
+  {path: 'destinations/hortonPlains-rus', component: HortonPlainsRusComponent},
+  {path: 'destinations/kalpitiya-ger', component: KalpitiyaGerComponent},
+  {path: 'destinations/kalpitiya-rus', component: KalpitiyaRusComponent},
+  {path: 'destinations/mirissa-ger', component: MirissaGerComponent},
+  {path: 'destinations/mirissa-rus', component: MirissaRusComponent},
+  {path: 'destinations/nuwaraEliya-ger', component: NuwaraEliyaGerComponent},
+  {path: 'destinations/nuwaraEliya-rus', component: NuwaraEliyaRusComponent},
   /*{path: '**', component: NotFoundComponent},*/
 ];
 

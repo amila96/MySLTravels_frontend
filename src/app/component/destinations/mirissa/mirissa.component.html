@@ -1,5 +1,19 @@
 <app-main-nav>
 
+  <!--language switcher-->
+  <div style="text-align: right; padding-right: 10px; padding-top: 10px;padding-bottom: 0">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+        Language
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li><button class="dropdown-item" type="button" routerLink="/destinations/mirissa"><img src="https://www.countryflags.io/gb/flat/32.png" style="margin-right: 15px">English</button></li>
+        <li><button class="dropdown-item" type="button" routerLink="/destinations/mirissa-ger"><img src="https://www.countryflags.io/de/flat/32.png" style="margin-right: 15px">German</button></li>
+        <li><button class="dropdown-item" type="button" routerLink="/destinations/mirissa-rus"><img src="https://www.countryflags.io/ru/flat/32.png" style="margin-right: 15px">Russian</button></li>
+      </ul>
+    </div>
+  </div>
+
  <!-- image-->
   <p class="imgDesti">
     <img class="destiImage" src="assets/images/DestiMirissa.jpg" alt="Mirissa">

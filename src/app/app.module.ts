@@ -41,13 +41,25 @@ import { AncientTourComponent } from './component/tour-packages/ancient-tour/anc
 import { HikingTourComponent } from './component/tour-packages/hiking-tour/hiking-tour.component';
 import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
-import { LanguageSwitcherComponent } from './component/language-switcher/language-switcher.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MainNavGerComponent } from './component/main-nav/main-nav-ger/main-nav-ger.component';
 import { MainNavRusComponent } from './component/main-nav/main-nav-rus/main-nav-rus.component';
 import { BentotaGerComponent } from './component/destinations/bentota/bentota-ger/bentota-ger.component';
 import { BentotaRusComponent } from './component/destinations/bentota/bentota-rus/bentota-rus.component';
 import { EllaGerComponent } from './component/destinations/ella/ella-ger/ella-ger.component';
+import { EllaRusComponent } from './component/destinations/ella/ella-rus/ella-rus.component';
+import { GalleFortGerComponent } from './component/destinations/galle-fort/galle-fort-ger/galle-fort-ger.component';
+import { GalleFortRusComponent } from './component/destinations/galle-fort/galle-fort-rus/galle-fort-rus.component';
+import { HikkaduwaGerComponent } from './component/destinations/hikkaduwa/hikkaduwa-ger/hikkaduwa-ger.component';
+import { HikkaduwaRusComponent } from './component/destinations/hikkaduwa/hikkaduwa-rus/hikkaduwa-rus.component';
+import { HortonPlainsGerComponent } from './component/destinations/horton-plains/horton-plains-ger/horton-plains-ger.component';
+import { HortonPlainsRusComponent } from './component/destinations/horton-plains/horton-plains-rus/horton-plains-rus.component';
+import { KalpitiyaGerComponent } from './component/destinations/kalpitiya/kalpitiya-ger/kalpitiya-ger.component';
+import { KalpitiyaRusComponent } from './component/destinations/kalpitiya/kalpitiya-rus/kalpitiya-rus.component';
+import { MirissaGerComponent } from './component/destinations/mirissa/mirissa-ger/mirissa-ger.component';
+import { NuwaraEliyaGerComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-ger/nuwara-eliya-ger.component';
+import { NuwaraEliyaRusComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-rus/nuwara-eliya-rus.component';
+import { MirissaRusComponent } from './component/destinations/mirissa/mirissa-rus/mirissa-rus.component';
 
 @NgModule({
   declarations: [
@@ -81,12 +93,24 @@ import { EllaGerComponent } from './component/destinations/ella/ella-ger/ella-ge
     HikingTourComponent,
     WildlifeTourComponent,
     NotFoundComponent,
-    LanguageSwitcherComponent,
     MainNavGerComponent,
     MainNavRusComponent,
     BentotaGerComponent,
     BentotaRusComponent,
-    EllaGerComponent
+    EllaGerComponent,
+    EllaRusComponent,
+    GalleFortGerComponent,
+    GalleFortRusComponent,
+    HikkaduwaGerComponent,
+    HikkaduwaRusComponent,
+    HortonPlainsGerComponent,
+    HortonPlainsRusComponent,
+    KalpitiyaGerComponent,
+    KalpitiyaRusComponent,
+    MirissaGerComponent,
+    NuwaraEliyaGerComponent,
+    NuwaraEliyaRusComponent,
+    MirissaRusComponent
   ],
   imports: [
     BrowserModule,
