@@ -11,6 +11,14 @@ export const environment = {
   baseUrl: 'http://localhost:3000/api/v1/customerRoute/',
   baseUrl2: 'http://localhost:3000/api/v1/contactUsMessageRoute/',
   baseUrl3: 'http://localhost:3000/api/v1/airportPickupBookingRoute/',
+  baseUrl4: 'http://localhost:3000/api/v1/bentotaReviewRoute/',
+  baseUrl5: 'http://localhost:3000/api/v1/ellaReviewRoute/',
+  baseUrl6: 'http://localhost:3000/api/v1/galleFortReviewRoute/',
+  baseUrl7: 'http://localhost:3000/api/v1/hikkaduwaReviewRoute/',
+  baseUrl8: 'http://localhost:3000/api/v1/hortonPlainsReviewRoute/',
+  baseUrl9: 'http://localhost:3000/api/v1/kalpitiyaReviewRoute/',
+  baseUrl10: 'http://localhost:3000/api/v1/mirissaReviewRoute/',
+  baseUrl11: 'http://localhost:3000/api/v1/nuwaraEliyaReviewRoute/',
 };
 
 

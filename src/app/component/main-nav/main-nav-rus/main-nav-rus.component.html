@@ -1,0 +1,77 @@
+<!--
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>MySLTravels</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Направления</a>
+      <a mat-list-item href="#">Турпакеты</a>
+      <a mat-list-item href="#">Встреча в аэропорту</a>
+      <a mat-list-item href="#">О нас</a>
+      <a mat-list-item href="#">Свяжитесь с нами</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">меню</mat-icon>
+      </button>
+      <span class="pointer" style="font-family: Merienda; font-size:x-large" routerLink="" ><img src="assets/images/logo.png" alt="" style="height: 50px ;padding-right:10px" routerLink="">MySLTravels</span>
+      <span class="spacer"></span>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/destinations">Направления</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/tourPackages">Турпакеты</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/airportPickup">Встреча в аэропорту</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/aboutUs">О нас</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/contactUs">Свяжитесь с нами</a>
+      <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false"  routerLink="/login">Авторизоваться</a>
+      <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false" routerLink="/singUp">Зарегистрироваться</a>
+    </mat-toolbar>
+    &lt;!&ndash; Add Content Here &ndash;&gt;
+  </mat-sidenav-content>
+</mat-sidenav-container>
+-->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>MySLTravels</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#">Направления</a>
+      <a mat-list-item href="#">Турпакеты</a>
+      <a mat-list-item href="#">Встреча в аэропорту</a>
+      <a mat-list-item href="#">О нас</a>
+      <a mat-list-item href="#">Свяжитесь с нами</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="pointer" style="font-family: Merienda; font-size:x-large" routerLink="" ><img src="assets/images/logo.png" alt="" style="height: 50px ;padding-right:10px" routerLink="">MySLTravels</span>
+      <span class="spacer"></span>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/destinations">Направления</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/tourPackages">Турпакеты</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/airportPickup">Встреча в аэропорту</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/aboutUs">О нас</a>
+      <a mat-button *ngIf="(isHandset$ | async)===false" style="font-size: large" routerLink="/contactUs">Свяжитесь с нами</a>
+      <a mat-raised-button color="accent" style="margin-right: 5px"  *ngIf="(isHandset$ | async)===false"  routerLink="/login">Авторизоваться</a>
+      <a mat-raised-button color="accent"  *ngIf="(isHandset$ | async)===false" routerLink="/singUp">Зарегистрироваться</a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

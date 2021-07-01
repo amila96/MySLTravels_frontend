@@ -13,3 +13,4 @@ export class DestinationsComponent implements OnInit {
   }
 
 }
+

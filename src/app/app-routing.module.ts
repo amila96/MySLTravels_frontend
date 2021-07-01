@@ -27,7 +27,10 @@ import { HikingTourComponent } from './component/tour-packages/hiking-tour/hikin
 import { HillCountryTourComponent } from './component/tour-packages/hill-country-tour/hill-country-tour.component';
 import { NatureTourComponent } from './component/tour-packages/nature-tour/nature-tour.component';
 import { WildlifeTourComponent } from './component/tour-packages/wildlife-tour/wildlife-tour.component';
-import { NotFoundComponent } from './component/not-found/not-found.component';
+/*import { NotFoundComponent } from './component/not-found/not-found.component';*/
+import { BentotaGerComponent } from './component/destinations/bentota/bentota-ger/bentota-ger.component';
+import { BentotaRusComponent } from './component/destinations/bentota/bentota-rus/bentota-rus.component';
+import { EllaGerComponent } from './component/destinations/ella/ella-ger/ella-ger.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -56,7 +59,10 @@ const routes: Routes = [
   {path: 'tourPackages/hillCountryTour', component: HillCountryTourComponent},
   {path: 'tourPackages/natureTour', component: NatureTourComponent},
   {path: 'tourPackages/wildlifeTour', component: WildlifeTourComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: 'destinations/bentota-ger', component: BentotaGerComponent},
+  {path: 'destinations/bentota-rus', component: BentotaRusComponent},
+  {path: 'destinations/ella-ger', component: EllaGerComponent},
+  /*{path: '**', component: NotFoundComponent},*/
 ];
 
 @NgModule({

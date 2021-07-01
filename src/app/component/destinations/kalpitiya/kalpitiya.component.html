@@ -87,6 +87,30 @@
     diverse habitats ranging from flat coastal plains and vast sand dune beaches to mangrove swamps and elephant
     inhabited jungles.
   </p>
+  <br>
+
+  <!--comment box-->
+  <div class="main-wrap">
+
+    <div  *ngFor="let tempReview of kalpitiyaReviewList; index as num">
+      <i class="fas fa-user-circle fa-2x" style="padding-right: 10px"></i>
+      <p class="commentDis">{{tempReview.name}}:</p>
+      <p class="commentDis">{{tempReview.comment}}</p>
+    </div>
+    <br><br>
+
+    <p class="comment">Write a comment</p>
+    <br>
+    <div class="mb-3">
+      <input [(ngModel)]="RevName" type="text" class="form-control" id="Name" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <textarea [(ngModel)]="Comment" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comment"></textarea>
+    </div>
+    <br>
+    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveComment()" >Submit</button></p>
+  </div>
+  <br>
 
   <app-footer></app-footer>
 </app-main-nav>

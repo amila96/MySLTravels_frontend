@@ -8,8 +8,6 @@ import ContactUsMessageDTO from '../../dto/ContactUsMessageDTO';
   styleUrls: ['./contact-us.component.scss']
 })
 
-
-
 export class ContactUsComponent implements OnInit {
 
   constructor(private contactUsMessageService: ContactUsMessageService) {
