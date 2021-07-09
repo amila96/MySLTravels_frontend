@@ -62,6 +62,7 @@
   </table>
 </div>
 <br>
+<br>
 
 <!--airportpickup bookings-->
 <div class="main-wrap">
@@ -107,9 +108,254 @@
   </table>
 </div>
 
+<!--create tour package-->
+<div class="main-wrap">
+  <p class="tittle">Tour Packages</p>
+  <br>
+  <div class="box-shadow">
+
+    <p class="headerText">Create a tour package</p>
+    <br>
+
+    <div class="mb-3">
+      <label for="TpName" class="form-label" >Tour Package Name</label>
+      <input [(ngModel)]="tourPackageName" type="text" class="form-control" id="TpName">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label" >Description</label>
+      <textarea [(ngModel)]="description" type="text" class="form-control" id="description" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="NumDays" class="form-label" >Number of Days</label>
+      <input [(ngModel)]="days" type="number" class="form-control" id="NumDays">
+    </div>
+
+    <div class="mb-3">
+      <label for="hotels" class="form-label" >Hotels</label>
+      <input [(ngModel)]="hotels" type="text" class="form-control" id="hotels">
+    </div>
+
+    <div class="mb-3">
+      <label for="visitingPlaces" class="form-label" >Visiting Places</label>
+      <input [(ngModel)]="visitingPlaces" type="text" class="form-control" id="visitingPlaces">
+    </div>
+
+    <div class="mb-3">
+      <label for="activities" class="form-label" >Activities</label>
+      <input [(ngModel)]="activities" type="text" class="form-control" id="activities">
+    </div>
+
+    <div class="mb-3">
+      <label for="schedule" class="form-label" >Schedule</label>
+      <textarea [(ngModel)]="schedule" type="text" class="form-control" id="schedule" rows="3"></textarea>
+    </div>
+
+    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveTourPackage()">Create Tour Package</button></p>
+
+  </div>
+</div>
+<br>
+
+<!--contact us messages-->
+<div class="main-wrap">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tour package name</th>
+      <th scope="col">Description</th>
+      <th scope="col">No. of Days</th>
+      <th scope="col">Hotels</th>
+      <th scope="col">Visiting places</th>
+      <th scope="col">Activities</th>
+      <th scope="col">Schedule</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempTourPackage of tourPackageList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempTourPackage.tourPackageName}}</td>
+      <td>{{tempTourPackage.description}}</td>
+      <td>{{tempTourPackage.days}}</td>
+      <td>{{tempTourPackage.hotels}}</td>
+      <td>{{tempTourPackage.visitingPlaces}}</td>
+      <td>{{tempTourPackage.activities}}</td>
+      <td>{{tempTourPackage.schedule}}</td>
+      <td>
+        <p>
+          <button class="btn btn-danger btn-sm" (click)="deleteTourPackage(tempTourPackage._id)">Delete</button>
+          <button class="btn btn-success btn-sm" (click)="openModel(tempTourPackage)">Update</button>&nbsp;
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Button trigger modal -->
+<button style="display: none" id="updatebutton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Tour Package</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="tourPackageNameForUpdate" class="form-label">Tour package name</label>
+          <input value="{{selectedTourPackage?.tourPackageName}}" [(ngModel)]="tourPackageNameForUpdate" type="text" class="form-control" id="TourPackageNameForUpdate" placeholder="Tour Package Name">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageDescriptionForUpdate" class="form-label">Description</label>
+          <input  value="{{selectedTourPackage?.description}}" [(ngModel)]="tourPackageDescriptionForUpdate"  type="text" class="form-control" id="TourPackageDescriptionForUpdate" placeholder="Tour Package Description">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageDaysForUpdate" class="form-label">No. of Days</label>
+          <input  value="{{selectedTourPackage?.days}}" [(ngModel)]="tourPackageDaysForUpdate"  type="number" class="form-control" id="TourPackageDaysForUpdate" placeholder="Days">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageHotelsForUpdate" class="form-label">Hotels</label>
+          <input  value="{{selectedTourPackage?.hotels}}" [(ngModel)]="TourPackageHotelsForUpdate"  type="text" class="form-control" id="tourPackageHotelsForUpdate" placeholder="Hotels">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageVisitingPlacesForUpdate" class="form-label">Visiting places</label>
+          <input  value="{{selectedTourPackage?.visitingPlaces}}" [(ngModel)]="TourPackageVisitingPlacesForUpdate"  type="text" class="form-control" id="tourPackageVisitingPlacesForUpdate" placeholder="Visiting Places">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageActivitiesForUpdate" class="form-label">Activities</label>
+          <input  value="{{selectedTourPackage?.activities}}" [(ngModel)]="TourPackageActivitiesForUpdate"  type="text" class="form-control" id="tourPackageActivitiesForUpdate" placeholder="Activities">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageScheduleForUpdate" class="form-label">Schedule</label>
+          <input  value="{{selectedTourPackage?.schedule}}" [(ngModel)]="TourPackageScheduleForUpdate"  type="text" class="form-control" id="tourPackageScheduleForUpdate" placeholder="Schedule">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateTourPackage()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Tour Package</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="tourPackageNameForUpdate" class="form-label">Tour package name</label>
+          <input value="{{selectedTourPackage?.tourPackageName}}" [(ngModel)]="tourPackageName" type="text" class="form-control" id="TourPackageNameForUpdate" placeholder="Tour Package Name">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageDescriptionForUpdate" class="form-label">Description</label>
+          <input  value="{{selectedTourPackage?.description}}" [(ngModel)]="description"  type="text" class="form-control" id="TourPackageDescriptionForUpdate" placeholder="Tour Package Description">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageDaysForUpdate" class="form-label">No. of Days</label>
+          <input  value="{{selectedTourPackage?.days}}" [(ngModel)]="days"  type="number" class="form-control" id="TourPackageDaysForUpdate" placeholder="Days">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageHotelsForUpdate" class="form-label">Hotels</label>
+          <input  value="{{selectedTourPackage?.hotels}}" [(ngModel)]="hotels"  type="text" class="form-control" id="tourPackageHotelsForUpdate" placeholder="Hotels">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageVisitingPlacesForUpdate" class="form-label">Visiting places</label>
+          <input  value="{{selectedTourPackage?.visitingPlaces}}" [(ngModel)]="visitingPlaces"  type="text" class="form-control" id="tourPackageVisitingPlacesForUpdate" placeholder="Visiting Places">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageActivitiesForUpdate" class="form-label">Activities</label>
+          <input  value="{{selectedTourPackage?.activities}}" [(ngModel)]="activities"  type="text" class="form-control" id="tourPackageActivitiesForUpdate" placeholder="Activities">
+        </div>
+
+        <div class="mb-3">
+          <label for="tourPackageScheduleForUpdate" class="form-label">Schedule</label>
+          <input  value="{{selectedTourPackage?.schedule}}" [(ngModel)]="schedule"  type="text" class="form-control" id="tourPackageScheduleForUpdate" placeholder="Schedule">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateTourPackage()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 
 
+<!--<div class="main-wrap" *ngFor="let tempTourPackage of tourPackageList; index as num" >
+
+  <div class="box-shadow">
+
+    <p class="headerText">{{tempTourPackage.tourPackageName}}</p>
+    <br>
+
+
+    <div class="mb-3">
+      <label for="description" class="form-label" >Description : </label>
+      <label for="description" class="form-label" >{{tempTourPackage.description}}</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="NumDays" class="form-label" >Number of Days : </label>
+      <label for="NumDays" class="form-label" >{{tempTourPackage.days}}</label>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="hotels" class="form-label" >Hotels : </label>
+      <label for="hotels" class="form-label" >{{tempTourPackage.hotels}}</label>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="visitingPlaces" class="form-label" >Visiting Places : </label>
+      <label for="visitingPlaces" class="form-label" >{{tempTourPackage.visitingPlaces}}</label>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="activities" class="form-label" >Activities : </label>
+      <label for="activities" class="form-label" >{{tempTourPackage.activities}}</label>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="schedule" class="form-label" >Schedule : </label>
+      <label for="schedule" class="form-label" >{{tempTourPackage.schedule}}</label>
+
+    </div>
+
+  </div>
+</div>
+<br>-->

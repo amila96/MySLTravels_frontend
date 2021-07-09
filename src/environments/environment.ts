@@ -19,6 +19,7 @@ export const environment = {
   baseUrl9: 'http://localhost:3000/api/v1/kalpitiyaReviewRoute/',
   baseUrl10: 'http://localhost:3000/api/v1/mirissaReviewRoute/',
   baseUrl11: 'http://localhost:3000/api/v1/nuwaraEliyaReviewRoute/',
+  baseUrl12: 'http://localhost:3000/api/v1/tourPackageRoute/',
 };
 
 

@@ -5,6 +5,8 @@ import {AirportPickupBookingService} from '../../service/airport-pickup-booking.
 import AirportPickupBookingsDTO from '../../dto/AirportPickupBookingsDTO';
 import { animate, style, transition, trigger} from '@angular/animations';
 import {logger} from "codelyzer/util/logger";
+import { TourPackageService } from "../../service/tour-package.service";
+import TourPackageDTO from "../../dto/TourPackageDTO";
 
 @Component({
   selector: 'app-dash-board',
@@ -25,7 +27,7 @@ import {logger} from "codelyzer/util/logger";
 
 export class DashBoardComponent implements OnInit {
 
-  constructor(private contactUsMessageService: ContactUsMessageService, private airportPickupBookingService: AirportPickupBookingService) {
+  constructor(private contactUsMessageService: ContactUsMessageService, private airportPickupBookingService: AirportPickupBookingService, private tourPackageService: TourPackageService) {
   }
 
   contactUsMessageList: any[] = [];
@@ -36,9 +38,29 @@ export class DashBoardComponent implements OnInit {
   ngOnInit(): void {
     this.loadAllMessages();
     this.loadAllAirportPickupBookings();
+    this.loadAllTourPackages();
   }
 
-  leftSideVisibleState= false;
+  leftSideVisibleState = false;
+
+  tourPackageName = '';
+  description = '';
+  days = 0;
+  hotels = '';
+  visitingPlaces = '';
+  activities = '';
+  schedule = '';
+
+  tourPackageList: any[] = [];
+
+  selectedTourPackage: any = null;
+  tourPackageNameForUpdate='';
+  tourPackageDescriptionForUpdate='';
+  tourPackageDaysForUpdate=0;
+  TourPackageHotelsForUpdate='';
+  TourPackageVisitingPlacesForUpdate='';
+  TourPackageActivitiesForUpdate='';
+  TourPackageScheduleForUpdate='';
 
   toggleSlide(){
     this.leftSideVisibleState=!this.leftSideVisibleState;
@@ -82,4 +104,87 @@ export class DashBoardComponent implements OnInit {
     }
   }
 
+  loadAllTourPackages() {
+    this.tourPackageService.getAllTourPackages().subscribe(response => {
+      this.tourPackageList = response.dataSet;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  saveTourPackage() {
+
+    const dto = new TourPackageDTO(
+      this.tourPackageName.trim(),
+      this.description.trim(),
+      Number(this.days),
+      this.hotels.trim(),
+      this.visitingPlaces.trim(),
+      this.activities.trim(),
+      this.schedule.trim(),
+    );
+
+    this.tourPackageService.saveTourPackage(dto).subscribe(resp => {
+      alert(resp.message);
+      this.loadAllTourPackages();
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  deleteTourPackage(_id: string) {
+    if (confirm('Are You sure?')) {
+      this.tourPackageService.deleteTourPackage(_id).subscribe(respose => {
+        this.loadAllTourPackages();
+        alert('Deleted!');
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
+
+  openModel(tourPackage: any) {
+    this.selectedTourPackage = tourPackage;
+    /* const btn = document.getElementById('updatebutton') as HTMLElement;
+     btn.click();*/
+    document.getElementById('updatebutton').click();
+  }
+
+  /*updateTourPackage() {
+    const dto = new TourPackageDTO(
+      this.tourPackageNameForUpdate.trim(),
+      this.tourPackageDescriptionForUpdate.trim(),
+      Number(this.tourPackageDaysForUpdate),
+      this.TourPackageHotelsForUpdate.trim(),
+      this.TourPackageVisitingPlacesForUpdate.trim(),
+      this.TourPackageActivitiesForUpdate.trim(),
+      this.TourPackageScheduleForUpdate.trim(),
+    );
+    this.tourPackageService.updateTourPackage(dto, this.selectedTourPackage._id).subscribe(response => {
+      alert('Updated');
+    }, error => {
+      console.log(error);
+    });
+  }*/
+  updateTourPackage() {
+    const dto = new TourPackageDTO(
+      this.tourPackageName.trim(),
+      this.description.trim(),
+      Number(this.days),
+      this.hotels.trim(),
+      this.visitingPlaces.trim(),
+      this.activities.trim(),
+      this.schedule.trim(),
+    );
+    this.tourPackageService.updateTourPackage(dto, this.selectedTourPackage._id).subscribe(response => {
+      alert('Updated');
+      this.loadAllTourPackages();
+    }, error => {
+      console.log(error);
+    });
+  }
+
+
+
 }
+
