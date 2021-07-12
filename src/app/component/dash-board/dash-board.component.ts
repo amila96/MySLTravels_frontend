@@ -5,8 +5,12 @@ import {AirportPickupBookingService} from '../../service/airport-pickup-booking.
 import AirportPickupBookingsDTO from '../../dto/AirportPickupBookingsDTO';
 import { animate, style, transition, trigger} from '@angular/animations';
 import {logger} from "codelyzer/util/logger";
-import { TourPackageService } from "../../service/tour-package.service";
-import TourPackageDTO from "../../dto/TourPackageDTO";
+import { TourPackageService } from '../../service/tour-package.service';
+import TourPackageDTO from '../../dto/TourPackageDTO';
+import { TourPackageBookingService } from '../../service/tour-package-booking.service';
+import TourPackageBookingsDTO from '../../dto/TourPackageBookingsDTO';
+import { OwnTourPackageService } from '../../service/own-tour-package.service';
+import OwnTourPackageDTO from '../../dto/OwnTourPackageDTO';
 
 @Component({
   selector: 'app-dash-board',
@@ -27,18 +31,24 @@ import TourPackageDTO from "../../dto/TourPackageDTO";
 
 export class DashBoardComponent implements OnInit {
 
-  constructor(private contactUsMessageService: ContactUsMessageService, private airportPickupBookingService: AirportPickupBookingService, private tourPackageService: TourPackageService) {
+  constructor(private contactUsMessageService: ContactUsMessageService, private airportPickupBookingService: AirportPickupBookingService, private tourPackageService: TourPackageService, private tourPackageBookingService: TourPackageBookingService, private ownTourPackageService: OwnTourPackageService) {
   }
 
   contactUsMessageList: any[] = [];
 
   airportPickupBookingList: any[] = [];
 
+  tourPackageBookingList: any[] = [];
+
+  ownTourPackageList: any[] = [];
+
 
   ngOnInit(): void {
     this.loadAllMessages();
     this.loadAllAirportPickupBookings();
     this.loadAllTourPackages();
+    this.loadAllTourPackagesBookings();
+    this.loadAllOwnTourPackages();
   }
 
   leftSideVisibleState = false;
@@ -54,16 +64,16 @@ export class DashBoardComponent implements OnInit {
   tourPackageList: any[] = [];
 
   selectedTourPackage: any = null;
-  tourPackageNameForUpdate='';
-  tourPackageDescriptionForUpdate='';
-  tourPackageDaysForUpdate=0;
-  TourPackageHotelsForUpdate='';
-  TourPackageVisitingPlacesForUpdate='';
-  TourPackageActivitiesForUpdate='';
-  TourPackageScheduleForUpdate='';
+  tourPackageNameForUpdate = '';
+  tourPackageDescriptionForUpdate = '';
+  tourPackageDaysForUpdate = 0;
+  TourPackageHotelsForUpdate = '';
+  TourPackageVisitingPlacesForUpdate = '';
+  TourPackageActivitiesForUpdate = '';
+  TourPackageScheduleForUpdate = '';
 
-  toggleSlide(){
-    this.leftSideVisibleState=!this.leftSideVisibleState;
+  toggleSlide() {
+    this.leftSideVisibleState = !this.leftSideVisibleState;
   }
 
   loadAllMessages() {
@@ -85,7 +95,7 @@ export class DashBoardComponent implements OnInit {
     }
   }
 
-  loadAllAirportPickupBookings(){
+  loadAllAirportPickupBookings() {
     this.airportPickupBookingService.getAllAirBookings().subscribe(response => {
       this.airportPickupBookingList = response.dataSet;
     }, error => {
@@ -93,7 +103,7 @@ export class DashBoardComponent implements OnInit {
     });
   }
 
-  deleteAirportPickupBooking(_id: string){
+  deleteAirportPickupBooking(_id: string) {
     if (confirm('Are you sure?')) {
       this.airportPickupBookingService.deleteAirBooking(_id).subscribe(respose => {
         this.loadAllAirportPickupBookings();
@@ -103,6 +113,7 @@ export class DashBoardComponent implements OnInit {
       });
     }
   }
+
 
   loadAllTourPackages() {
     this.tourPackageService.getAllTourPackages().subscribe(response => {
@@ -184,7 +195,44 @@ export class DashBoardComponent implements OnInit {
     });
   }
 
+  loadAllTourPackagesBookings() {
+    this.tourPackageBookingService.getAllTpBookings().subscribe(response => {
+      this.tourPackageBookingList = response.dataSet;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  deleteTourPackageBooking(_id: string) {
+    if (confirm('Are you sure?')) {
+      this.tourPackageBookingService.deleteTpBooking(_id).subscribe(respose => {
+        this.loadAllTourPackagesBookings();
+        alert('Deleted!');
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
+
+
+  loadAllOwnTourPackages() {
+    this.ownTourPackageService.getAllOwnTourPackages().subscribe(response => {
+      this.ownTourPackageList = response.dataSet;
+    }, error => {
+      console.log(error);
+    });
+  }
+
+  deleteOwnTourPackage(_id: string) {
+    if (confirm('Are You sure?')) {
+      this.ownTourPackageService.deleteOwnTourPackage(_id).subscribe(respose => {
+        this.loadAllOwnTourPackages();
+        alert('Deleted!');
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
 
 
 }
-

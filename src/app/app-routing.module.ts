@@ -44,6 +44,7 @@ import { MirissaGerComponent } from './component/destinations/mirissa/mirissa-ge
 import { MirissaRusComponent } from './component/destinations/mirissa/mirissa-rus/mirissa-rus.component';
 import { NuwaraEliyaGerComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-ger/nuwara-eliya-ger.component';
 import { NuwaraEliyaRusComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-rus/nuwara-eliya-rus.component';
+import { TourPackageBookingComponent} from './component/tour-packages/tour-package-booking/tour-package-booking.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -88,6 +89,7 @@ const routes: Routes = [
   {path: 'destinations/mirissa-rus', component: MirissaRusComponent},
   {path: 'destinations/nuwaraEliya-ger', component: NuwaraEliyaGerComponent},
   {path: 'destinations/nuwaraEliya-rus', component: NuwaraEliyaRusComponent},
+  {path: 'tourPackages/toutPackageBooking', component: TourPackageBookingComponent}
   /*{path: '**', component: NotFoundComponent},*/
 ];
 

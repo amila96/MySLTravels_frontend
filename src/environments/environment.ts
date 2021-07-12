@@ -20,6 +20,8 @@ export const environment = {
   baseUrl10: 'http://localhost:3000/api/v1/mirissaReviewRoute/',
   baseUrl11: 'http://localhost:3000/api/v1/nuwaraEliyaReviewRoute/',
   baseUrl12: 'http://localhost:3000/api/v1/tourPackageRoute/',
+  baseUrl13: 'http://localhost:3000/api/v1/tourPackageBookingRoute/',
+  baseUrl14: 'http://localhost:3000/api/v1/ownTourPackageRoute/'
 };
 
 

@@ -158,7 +158,7 @@
 </div>
 <br>
 
-<!--contact us messages-->
+<!--admin created tour packages-->
 <div class="main-wrap">
   <table class="table">
     <thead>
@@ -308,9 +308,103 @@
   </div>
 </div>
 
+<!--tour package bookings-->
+<div class="main-wrap">
+  <p class="tittle">Tour Package Bookings</p>
+  <br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Passport Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Country</th>
+      <th scope="col">Language</th>
+      <th scope="col">Vehicle</th>
+      <th scope="col">No. of Travellers</th>
+      <th scope="col">Date</th>
+      <th scope="col">Room type</th>
+      <th scope="col">No. of Rooms</th>
+      <th scope="col">Tour Guide</th>
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempTourBooking of tourPackageBookingList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempTourBooking.name}}</td>
+      <td>{{tempTourBooking.passportNumber}}</td>
+      <td>{{tempTourBooking.email}}</td>
+      <td>{{tempTourBooking.country}}</td>
+      <td>{{tempTourBooking.language}}</td>
+      <td>{{tempTourBooking.vehicleType}}</td>
+      <td>{{tempTourBooking.numberOfTravellers}}</td>
+      <td>{{tempTourBooking.date}}</td>
+      <td>{{tempTourBooking.hotelRoomType}}</td>
+      <td>{{tempTourBooking.numberOfRooms}}</td>
+      <td>{{tempTourBooking.tourGuide}}</td>
+      <td>
+        <p>
+          <button class="btn btn-danger btn-sm" (click)="deleteTourPackageBooking(tempTourBooking._id)">Delete</button>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--own tour packages-->
+<div class="main-wrap">
+  <p class="tittle">Customer requested Tour Packages</p>
+  <br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Passport Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Country</th>
+      <th scope="col">Date</th>
+      <th scope="col">Places want to visit</th>
+      <th scope="col">Activities want ot do</th>
+      <th scope="col">Vehicle</th>
+      <th scope="col">Hotel</th>
+      <th scope="col">No. of Travellers</th>
+      <th scope="col">Tour Guide</th>
 
 
-
+      <th scope="col">Operate</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tempOwnTourPackage of ownTourPackageList; index as num">
+      <th scope="row">{{num+1}}</th>
+      <td>{{tempOwnTourPackage.name}}</td>
+      <td>{{tempOwnTourPackage.passportNumber}}</td>
+      <td>{{tempOwnTourPackage.email}}</td>
+      <td>{{tempOwnTourPackage.country}}</td>
+      <td>{{tempOwnTourPackage.date}}</td>
+      <td>{{tempOwnTourPackage.places}}</td>
+      <td>{{tempOwnTourPackage.activities}}</td>
+      <td>{{tempOwnTourPackage.vehicle}}</td>
+      <td>{{tempOwnTourPackage.hotel}}</td>
+      <td>{{tempOwnTourPackage.NumOfTravellers}}</td>
+      <td>{{tempOwnTourPackage.tourGuide}}</td>
+      <td>
+        <p>
+          <button class="btn btn-danger btn-sm" (click)="deleteMessage(tempOwnTourPackage._id)">Delete</button>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+        </p>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<br>
 
 
 <!--<div class="main-wrap" *ngFor="let tempTourPackage of tourPackageList; index as num" >

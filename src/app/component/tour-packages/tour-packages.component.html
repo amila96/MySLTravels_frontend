@@ -117,7 +117,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -220,7 +220,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -318,7 +318,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -424,7 +424,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -529,7 +529,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -621,7 +621,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -714,7 +714,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -817,7 +817,7 @@
         </div>
       </div>
       <br><br>
-      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/airportPickupBooking">Book Now</button></p>
+      <p style="text-align: center"><button mat-raised-button color="primary" routerLink="/tourPackages/toutPackageBooking">Book Now</button></p>
 
     </div>
   </div>
@@ -1080,6 +1080,74 @@
   </div>
   <br>
 
+  <!--customer created tour packages-->
+  <div class="main-wrap">
+    <div class="box-shadow">
+
+    <p class="headerText">Create your own Tour Package</p>
+
+    <div class="mb-3">
+      <label for="Name" class="form-label" >Name</label>
+      <input [(ngModel)]="OwnTpBookingCusName" type="text" class="form-control" id="Name">
+    </div>
+
+    <div class="mb-3">
+      <label for="passportNum" class="form-label" >Passport Number</label>
+      <input [(ngModel)]="OwnTpBookingCusPassNum" type="number" class="form-control" id="passportNum">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-la bel" >Email Address</label>
+      <input [(ngModel)]="OwnTpBookingCusEmail" type="email" class="form-control" id="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="country" class="form-label" >Country</label>
+      <input [(ngModel)]="OwnTpBookingCusCountry" type="text" class="form-control" id="country">
+    </div>
+
+    <div class="mb-3">
+      <label for="date1" class="form-label" >Start date of tour</label>
+      <input [(ngModel)]="OwnTpBookingDate" type="date" class="form-control" id="date1">
+    </div>
+
+    <div class="mb-3">
+      <label for="language" class="form-label" >Places you want to visit</label>
+      <input [(ngModel)]="OwnTpBookingPlaces" type="text" class="form-control" id="language">
+    </div>
+
+    <div class="mb-3">
+      <label for="activities" class="form-label" >Activities you want to do</label>
+      <input [(ngModel)]="OwnTpBookingActivities" type="text" class="form-control" id="activities">
+    </div>
+
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Vehicle</label>
+      <select [(ngModel)]="OwnTpBookingVehicle" id="disabledSelect" class="form-select">
+        <option>Honda Fit Shuttle gp 5 </option>
+        <option>Toyota KDH Super GL </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="hotel" class="form-label" >Hotels</label>
+      <input [(ngModel)]="OwnTpBookingHotel" type="text" class="form-control" id="hotel">
+    </div>
+
+    <div class="mb-3">
+      <label for="NumberOfTravellers" class="form-label" >Number Of Travellers</label>
+      <input [(ngModel)]="OwnTpBookingNumOfTrevellers" type="number" class="form-control" id="NumberOfTravellers">
+    </div>
+
+    <div class="mb-3">
+      <label for="tourGuide" class="form-label" >Tour Guide</label>
+      <input [(ngModel)]="OwnTpBookingTourGuide" type="text" class="form-control" id="tourGuide">
+    </div>
+
+    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveOwnTpBooking()">Submit</button></p>
+    </div>
+  </div>
+  <br>
 
 
   <app-footer></app-footer>

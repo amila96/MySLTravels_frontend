@@ -1,0 +1,74 @@
+<app-main-nav>
+
+  <div class="main-wrap">
+
+    <p class="headerText">Customer Details</p>
+
+    <div class="mb-3">
+      <label for="Name" class="form-label" >Name</label>
+      <input [(ngModel)]="TpBookingCusName" type="text" class="form-control" id="Name">
+    </div>
+
+    <div class="mb-3">
+      <label for="passportNum" class="form-label" >Passport Number</label>
+      <input [(ngModel)]="TpBookingCusPassNum" type="text" class="form-control" id="passportNum">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label" >Email Address</label>
+      <input [(ngModel)]="TpBookingCusEmail" type="email" class="form-control" id="email">
+    </div>
+
+    <div class="mb-3">
+      <label for="country" class="form-label" >Country</label>
+      <input [(ngModel)]="TpBookingCusCountry" type="text" class="form-control" id="country">
+    </div>
+
+    <div class="mb-3">
+      <label for="language" class="form-label" >Language</label>
+      <input [(ngModel)]="TpBookingCusLanguage" type="text" class="form-control" id="language">
+    </div>
+
+    <div class="mb-3">
+      <label for="disabledSelect" class="form-label">Vehicle</label>
+      <select [(ngModel)]="TpBookingVehicle" id="disabledSelect" class="form-select">
+        <option>Honda Fit Shuttle gp 5 </option>
+        <option>Toyota KDH Super GL </option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="NumberOfPassengers" class="form-label" >Number Of Travellers</label>
+      <input [(ngModel)]="TpBookingNumOfTrevellers" type="number" class="form-control" id="NumberOfPassengers">
+    </div>
+
+    <div class="mb-3">
+      <label for="date1" class="form-label" >Tour start Date</label>
+      <input [(ngModel)]="TpBookingDate" type="date" class="form-control" id="date1">
+    </div>
+
+    <div class="mb-3">
+      <label for="disabledSelectroom" class="form-label">Hotel Room type</label>
+      <select [(ngModel)]="TpBookingRoomType" id="disabledSelectroom" class="form-select">
+        <option>Single</option>
+        <option>Double</option>
+        <option>Twin</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="NumberOfRooms" class="form-label" >Number of required Rooms</label>
+      <input [(ngModel)]="TpBookingNumOfRooms" type="number" class="form-control" id="NumberOfRooms">
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label" >Tour Guide</label>
+      <input [(ngModel)]="TpBookingTourGuide" type="text" class="form-control" id="location">
+    </div>
+
+    <p style="text-align: center"><button mat-raised-button color="primary" (click)="saveTpBooking()">Submit</button></p>
+
+  </div>
+  <br>
+  <app-footer></app-footer>
+</app-main-nav>
