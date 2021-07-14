@@ -9,6 +9,7 @@ import BentotaReviewDTO from '../../../dto/BentotaReviewDTO';
 })
 export class BentotaComponent implements OnInit {
 
+
   constructor(private bentotaReviewService: BentotaReviewService) { }
 
   RevName = '';

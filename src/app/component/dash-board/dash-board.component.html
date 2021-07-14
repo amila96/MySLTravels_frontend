@@ -33,7 +33,7 @@
 <div class="main-wrap">
   <p class="tittle">Contact Us Messages</p>
   <br>
-  <table class="table">
+  <table class="table tableDesign">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -54,7 +54,7 @@
       <td>
         <p>
           <button class="btn btn-danger btn-sm" (click)="deleteMessage(tempMessage._id)">Delete</button>
-          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send an Email</a>
         </p>
       </td>
     </tr>
@@ -68,7 +68,7 @@
 <div class="main-wrap">
   <p class="tittle">Airport Pickup Bookings</p>
   <br>
-  <table class="table">
+  <table class="table tableDesign">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -99,7 +99,7 @@
       <td>
         <p>
           <button class="btn btn-danger btn-sm" (click)="deleteAirportPickupBooking(tempAirbooking._id)">Delete</button>
-          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send an Email</a>
 
         </p>
       </td>
@@ -160,7 +160,7 @@
 
 <!--admin created tour packages-->
 <div class="main-wrap">
-  <table class="table">
+  <table class="table tableDesign">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -186,7 +186,7 @@
       <td>{{tempTourPackage.schedule}}</td>
       <td>
         <p>
-          <button class="btn btn-danger btn-sm" (click)="deleteTourPackage(tempTourPackage._id)">Delete</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTourPackage(tempTourPackage._id)" style="margin-right: 5px">Delete</button>
           <button class="btn btn-success btn-sm" (click)="openModel(tempTourPackage)">Update</button>&nbsp;
         </p>
       </td>
@@ -312,7 +312,7 @@
 <div class="main-wrap">
   <p class="tittle">Tour Package Bookings</p>
   <br>
-  <table class="table">
+  <table class="table tableDesign">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -347,7 +347,7 @@
       <td>
         <p>
           <button class="btn btn-danger btn-sm" (click)="deleteTourPackageBooking(tempTourBooking._id)">Delete</button>
-          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send an Email</a>
 
         </p>
       </td>
@@ -360,7 +360,7 @@
 <div class="main-wrap">
   <p class="tittle">Customer requested Tour Packages</p>
   <br>
-  <table class="table">
+  <table class="table tableDesign">
     <thead>
     <tr>
       <th scope="col">#</th>
@@ -397,7 +397,7 @@
       <td>
         <p>
           <button class="btn btn-danger btn-sm" (click)="deleteMessage(tempOwnTourPackage._id)">Delete</button>
-          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send mail</a>
+          <a mat-button href="https://mail.google.com/mail/u/4/?ogbl#inbox?compose=new" target="_blank" color="primary">Send an Email</a>
         </p>
       </td>
     </tr>

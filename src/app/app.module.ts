@@ -61,6 +61,14 @@ import { NuwaraEliyaGerComponent } from './component/destinations/nuwara-eliya/n
 import { NuwaraEliyaRusComponent } from './component/destinations/nuwara-eliya/nuwara-eliya-rus/nuwara-eliya-rus.component';
 import { MirissaRusComponent } from './component/destinations/mirissa/mirissa-rus/mirissa-rus.component';
 import { TourPackageBookingComponent } from './component/tour-packages/tour-package-booking/tour-package-booking.component';
+import { WeatherBentotaComponent } from './component/destinations/bentota/weather-bentota/weather-bentota.component';
+import { WeatherEllaComponent } from './component/destinations/ella/weather-ella/weather-ella.component';
+import { WeatherGalleFortComponent } from './component/destinations/galle-fort/weather-galle-fort/weather-galle-fort.component';
+import { WeatherHikkaduwaComponent } from './component/destinations/hikkaduwa/weather-hikkaduwa/weather-hikkaduwa.component';
+import { WeatherHortonPlainsComponent } from './component/destinations/horton-plains/weather-horton-plains/weather-horton-plains.component';
+import { WeatherKalpitiyaComponent } from './component/destinations/kalpitiya/weather-kalpitiya/weather-kalpitiya.component';
+import { WeatherMirissaComponent } from './component/destinations/mirissa/weather-mirissa/weather-mirissa.component';
+import { WeatherNuwaraEliyaComponent } from './component/destinations/nuwara-eliya/weather-nuwara-eliya/weather-nuwara-eliya.component';
 
 @NgModule({
   declarations: [
@@ -112,7 +120,15 @@ import { TourPackageBookingComponent } from './component/tour-packages/tour-pack
     NuwaraEliyaGerComponent,
     NuwaraEliyaRusComponent,
     MirissaRusComponent,
-    TourPackageBookingComponent
+    TourPackageBookingComponent,
+    WeatherBentotaComponent,
+    WeatherEllaComponent,
+    WeatherGalleFortComponent,
+    WeatherHikkaduwaComponent,
+    WeatherHortonPlainsComponent,
+    WeatherKalpitiyaComponent,
+    WeatherMirissaComponent,
+    WeatherNuwaraEliyaComponent
   ],
   imports: [
     BrowserModule,
